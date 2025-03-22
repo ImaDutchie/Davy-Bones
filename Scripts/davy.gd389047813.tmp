@@ -1,0 +1,36 @@
+extends CharacterBody2D
+
+var speed: int = 50
+var direction: Vector2 = Vector2(0,1)
+@onready var bullet = preload("res://Scenes/bullet.tscn")
+
+func _physics_process(delta: float) -> void:
+	var inputDir: Vector2 = Vector2(
+		Input.get_axis("ui_left", "ui_right"), 
+		Input.get_axis("ui_up", "ui_down")).normalized()
+	if inputDir.x > 0:
+		#Check if the player is moving right
+		get_node("Davy").frame = 2
+		direction = inputDir
+	elif inputDir.x < 0:
+		#Check if the player is moving left
+		get_node("Davy").frame = 3
+		direction = inputDir
+	elif inputDir.y > 0:
+		#Check if the player is moving up
+		get_node("Davy").frame = 0
+		direction = inputDir
+	elif inputDir.y < 0:
+		#Check if the player is moving down
+		get_node("Davy").frame = 1
+		direction = inputDir
+	
+	get_node("SpawnPoint").position = direction*5
+	
+	if Input.is_action_just_pressed("Shoot"):
+		var bulletTemp = bullet.instantiate()
+		bulletTemp.velocity = direction*100 
+		bulletTemp.global_position = get_node("SpawnPoint").global_position
+		get_node("Bullets").add_child(bulletTemp)
+	velocity = inputDir * speed
+	move_and_slide()
