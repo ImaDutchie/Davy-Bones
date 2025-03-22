@@ -1,3 +1,3 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:30bf86067ac1ba231f2f610473dc2174f5f0b5049b524913a991252af7d466dc
-size 330
+# Godot 4+ specific ignores
+.godot/
+/android/
