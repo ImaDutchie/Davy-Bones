@@ -11,4 +11,5 @@ config_version=5
 [application]
 
 config/name="The revenge of Davy Bones"
+run/main_scene="uid://clgqm45hjvbqu"
 config/features=PackedStringArray("4.4", "Forward Plus")
