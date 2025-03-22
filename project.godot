@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca701450c7298f3b80db21ce0c4e9ef80fb1f2a873a5197cfdab777a99dc930c
-size 372
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="The revenge of Davy Bones"
+config/features=PackedStringArray("4.4", "Forward Plus")
