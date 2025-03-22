@@ -8,3 +8,4 @@
 ._Scenes filter=lfs diff=lfs merge=lfs -text
 ._Assets filter=lfs diff=lfs merge=lfs -text
 ._Scripts filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
