@@ -4,3 +4,4 @@
 *.godot filter=lfs diff=lfs merge=lfs -text
 *.uid filter=lfs diff=lfs merge=lfs -text
 *.gd filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
